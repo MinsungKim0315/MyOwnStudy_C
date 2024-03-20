@@ -1,150 +1,152 @@
 #include <stdio.h>
 #include <sys/time.h>
+
 //swaping two vars using a local variable in a block
-// int main(){
-//     int a = 10, b = 20;
+int main(){
+    int a = 10, b = 20;
 
-//     printf("a and b before swap: %d, %d\n", a, b);
-//     {
-//         int temp;
+    printf("a and b before swap: %d, %d\n", a, b);
+    {
+        int temp;
 
-//         temp = a;
-//         a = b;
-//         b = temp;
-//     }
-//     printf("a and b after swap: %d, %d\n", a, b);
-//     return 0;
-// }
+        temp = a;
+        a = b;
+        b = temp;
+    }
+    printf("a and b after swap: %d, %d\n", a, b);
+    return 0;
+}
 
 //global variable
-// void assign10(void);
-// void assign20(void);
+void assign10(void);
+void assign20(void);
 
-// int a;  //define local variable
+int a;  //define local variable
 
-// int main(){
-//     printf("a before calling function: %d\n", a);
+int main(){
+    printf("a before calling function: %d\n", a);
 
-//     assign10();
-//     assign20();
+    assign10();
+    assign20();
 
-//     printf("a after calling function: %d", a);
+    printf("a after calling function: %d", a);
 
-//     return 0;
-// }
+    return 0;
+}
 
-// void assign10(){
-//     a = 10;
-// }
-// void assign20(){
-//     int a;
-//     a = 20;
-// }
+void assign10(){
+    a = 10;
+}
+void assign20(){
+    int a;
+    a = 20;
+}
 
 //auto local var V.S. static local var
-// void auto_func(void);
-// void static_func(void);
+void auto_func(void);
+void static_func(void);
 
-// int main(){
-//     int i;
+int main(){
+    int i;
 
-//     printf("fuction using auto local var...\n");
-//     for(i=0;i<3;i++){
-//         auto_func();
-//     }
+    printf("fuction using auto local var...\n");
+    for(i=0;i<3;i++){
+        auto_func();
+    }
 
-//     printf("funciton using static local var...\n");
-//     for(i=0;i<3;i++){
-//         static_func();
-//     }
+    printf("funciton using static local var...\n");
+    for(i=0;i<3;i++){
+        static_func();
+    }
 
-//     return 0;
-// }
+    return 0;
+}
 
-// void auto_func(){
-//     auto int a = 0;
+void auto_func(){
+    auto int a = 0;
 
-//     a++;
-//     printf("%d\n", a);
-// }
+    a++;
+    printf("%d\n", a);
+}
 
-// void static_func(){
-//     static int a;
+void static_func(){
+    static int a;
 
-//     a++;
-//     printf("%d\n", a);
-// }
+    a++;
+    printf("%d\n", a);
+}
 
-// int main(){
-//     register int i;
-//     auto long int sum = 0;
-//     struct timeval start_time, end_time;
-//     long long elapsed_time;
+//register variable
+int main(){
+    register int i;
+    auto long int sum = 0;
+    struct timeval start_time, end_time;
+    long long elapsed_time;
 
 
-//     gettimeofday(&start_time, NULL);
-//     for(i=0;i<1000000;i++)
-//         sum += i;
+    gettimeofday(&start_time, NULL);
+    for(i=0;i<1000000;i++)
+        sum += i;
     
-//     printf("%d\n", sum);
-//     gettimeofday(&end_time, NULL);
-//     elapsed_time = (end_time.tv_sec - start_time.tv_sec) * 1000000LL + (end_time.tv_usec - start_time.tv_usec);
+    printf("%d\n", sum);
+    gettimeofday(&end_time, NULL);
+    elapsed_time = (end_time.tv_sec - start_time.tv_sec) * 1000000LL + (end_time.tv_usec - start_time.tv_usec);
 
-//     printf("Elapsed time: %lld microseconds\n", elapsed_time);
-//     return 0;
-// }
+    printf("Elapsed time: %lld microseconds\n", elapsed_time);
+    return 0;
+}
 
-//°ªÀ» º¹»çÇØ¼­ 10À» ´õÇÏ´Â ¹æ¹ý
-// int add_ten(int a);
+//ê°’ì„ ë³µì‚¬í•´ì„œ 10ì„ ë”í•˜ëŠ” ë°©ë²•
+int add_ten(int a);
 
-// int main(){
-//     int a = 10;
+int main(){
+    int a = 10;
 
-//     a = add_ten(a);
-//     printf("%d", a);
+    a = add_ten(a);
+    printf("%d", a);
 
-//     return 0;
-// }
-// int add_ten(int a){
-//     a = a + 10;
-//     return a;
-// }
+    return 0;
+}
+int add_ten(int a){
+    a = a + 10;
+    return a;
+}
 
-//Æ÷ÀÎÅÍ¸¦ ½á¼­ 10À» ´õÇÏ´Â ¹æ¹ý
-// void add_ten(int *pa);
+//í¬ì¸í„°ë¥¼ ì¨ì„œ 10ì„ ë”í•˜ëŠ” ë°©ë²•
+void add_ten(int *pa);
 
-// int main(){
-//     int a = 10;
+int main(){
+    int a = 10;
     
-//     add_ten(&a);
-//     printf("a: %d", a);
+    add_ten(&a);
+    printf("a: %d", a);
 
-//     return 0;
-// }
-// void add_ten(int *pa){
-//     *pa += 10;
-// }
+    return 0;
+}
+void add_ten(int *pa){
+    *pa += 10;
+}
 
-//ÁÖ¼Ò¸¦ ¹ÝÈ¯ÇÏ¿© µÎ Á¤¼öÀÇ ÇÕ ±¸ÇÏ±â
-// int *sum(int a, int b);
-// int main(){
-//     int *resp;
+//ì£¼ì†Œë¥¼ ë°˜í™˜í•˜ì—¬ ë‘ ì •ìˆ˜ì˜ í•© êµ¬í•˜ê¸°
+int *sum(int a, int b);
+int main(){
+    int *resp;
 
-//     resp = sum(10, 20);
-//     printf("sum of two nums: %d\n", *resp);
+    resp = sum(10, 20);
+    printf("sum of two nums: %d\n", *resp);
 
-//     return 0;
-// }
+    return 0;
+}
 
-// int *sum(int a, int b){
-//     static int res;
+int *sum(int a, int b){
+    static int res;
 
-//     res = a + b;
+    res = a + b;
 
-//     return &res;
-// }
+    return &res;
+}
 
-//Àü¿ª º¯¼ö ±³È¯ ÇÁ·Î±×·¥
+//ì „ì—­ ë³€ìˆ˜ êµí™˜ í”„ë¡œê·¸ëž¨
 void input_data(int *pa, int *pb);
 void swap_data(void);
 void print_data(int a, int b);
