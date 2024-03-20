@@ -1,178 +1,178 @@
 #include <stdio.h>
 #include <string.h>
 
-//Æ÷ÀÎÅÍ·Î ¹®ÀÚ¿­À» »ç¿ëÇÏ´Â ¹ý
-// int main(){
-//     char *dessert = "apple";
+//í¬ì¸í„°ë¡œ ë¬¸ìžì—´ì„ ì‚¬ìš©í•˜ëŠ” ë²•
+int main(){
+    char *dessert = "apple";
 
-//     printf("today's dessert  is %s\n", dessert);
-//     dessert = "banana";
-//     printf("tommorow's dessert is %s", dessert);
-// }
+    printf("today's dessert  is %s\n", dessert);
+    dessert = "banana";
+    printf("tommorow's dessert is %s", dessert);
+}
 
-//scanf ÇÔ¼ö¸¦ »ç¿ëÇÑ ¹®ÀÚ¿­ ÀÔ·Â
-// int main(){
-//     char str[80];
+//scanf í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•œ ë¬¸ìžì—´ ìž…ë ¥
+int main(){
+    char str[80];
 
-//     printf("type a string: ");
-//     scanf("%s", str);
-//     printf("first word: %s\n", str);
-//     scanf("%s", str);
-//     printf("the sencond word left in the buffer: %s\n", str);
+    printf("type a string: ");
+    scanf("%s", str);
+    printf("first word: %s\n", str);
+    scanf("%s", str);
+    printf("the sencond word left in the buffer: %s\n", str);
 
-//     return 0;
-// }
+    return 0;
+}
 
-//gets ÇÔ¼ö¸¦ »ç¿ëÇÑ ¹®ÀÚ¿­ ÀÔ·Â
-// int main(){
-//     char str[80];
+//gets í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•œ ë¬¸ìžì—´ ìž…ë ¥
+int main(){
+    char str[80];
 
-//     printf("type a string including space: ");
-//     gets(str);
-//     printf("string: %s", str);
-// }
+    printf("type a string including space: ");
+    gets(str);
+    printf("string: %s", str);
+}
 
-//fgets ÇÔ¼öÀÇ ¹®ÀÚ¿­ ÀÔ·Â ¹æ¹ý
-// int main(){
-//     char str[80];
-//     printf("type a string including space: ");
-//     fgets(str, sizeof(str), stdin);
-//     str[strlen(str)-1] = '\n';  //°³Çà¹®ÀÚ Á¦°ÅÇÏ´Â ¹æ¹ý
-//     printf("string: %s", str);
+//fgets í•¨ìˆ˜ì˜ ë¬¸ìžì—´ ìž…ë ¥ ë°©ë²•
+int main(){
+    char str[80];
+    printf("type a string including space: ");
+    fgets(str, sizeof(str), stdin);
+    str[strlen(str)-1] = '\n';  //ê°œí–‰ë¬¸ìž ì œê±°í•˜ëŠ” ë°©ë²•
+    printf("string: %s", str);
 
-//     return 0;
-// }
+    return 0;
+}
 
-//°³Çà ¹®ÀÚ·Î ÀÎÇØ gets ÇÔ¼ö°¡ ÀÔ·ÂÀ» ¸øÇÏ´Â °æ¿ì
-// int main(){
-//     int age;
-//     char name[20];
+//ê°œí–‰ ë¬¸ìžë¡œ ì¸í•´ gets í•¨ìˆ˜ê°€ ìž…ë ¥ì„ ëª»í•˜ëŠ” ê²½ìš°
+int main(){
+    int age;
+    char name[20];
 
-//     printf("type age: ");
-//     scanf("%d", &age);
-//     //getchar(); ¹öÆÛ¿¡¼­ ÇÏ³ªÀÇ ¹®ÀÚ¸¦ ÀÐ¾î¼­ º¯È¯, ¹ÝÈ¯ ¹®ÀÚ´Â ¹ö¸² /*or*/ 
-//     //scanf("%c"); ¹öÆÛ¿¡¼­ ÇÏ³ªÀÇ ¹®ÀÚ¸¦ ÀÐ¾î¼­ ¹ö¸², º¯¼ö´Â ÇÊ¿ä¾øÀ½/*or*/ 
-//     //fgetc(stdin); ¹öÆÛ¿¡¼­ ÇÏ³ªÀÇ ¹®ÀÚ¸¦ ÀÐ¾î¼­ ¹ÝÈ¯, ¹ÝÈ¯ ¹®ÀÚ´Â ¹ö¸²
-//     printf("type name: ");
-//     gets(name);
-//     printf("age: %d, name: %s", age, name);
-// }
+    printf("type age: ");
+    scanf("%d", &age);
+    //getchar(); ë²„í¼ì—ì„œ í•˜ë‚˜ì˜ ë¬¸ìžë¥¼ ì½ì–´ì„œ ë³€í™˜, ë°˜í™˜ ë¬¸ìžëŠ” ë²„ë¦¼ /*or*/ 
+    //scanf("%c"); ë²„í¼ì—ì„œ í•˜ë‚˜ì˜ ë¬¸ìžë¥¼ ì½ì–´ì„œ ë²„ë¦¼, ë³€ìˆ˜ëŠ” í•„ìš”ì—†ìŒ/*or*/ 
+    //fgetc(stdin); ë²„í¼ì—ì„œ í•˜ë‚˜ì˜ ë¬¸ìžë¥¼ ì½ì–´ì„œ ë°˜í™˜, ë°˜í™˜ ë¬¸ìžëŠ” ë²„ë¦¼
+    printf("type name: ");
+    gets(name);
+    printf("age: %d, name: %s", age, name);
+}
 
-//¹®ÀÚ¿­ Ãâ·ÂÇÏ´Â puts¿Í fputs ÇÔ¼ö
-// int main(){
-//     char str[80] = "apple juice";
-//     char *ps = "banana";
+//ë¬¸ìžì—´ ì¶œë ¥í•˜ëŠ” putsì™€ fputs í•¨ìˆ˜
+int main(){
+    char str[80] = "apple juice";
+    char *ps = "banana";
 
-//     puts(str);  //¹®ÀÚ¿­ Ãâ·ÂÇÏ°í ÀÚµ¿ ÁÙ ¹Ù²Þ
-//     fputs(ps, stdout);  //¹®ÀÚ¿­ Ãâ·ÂÇÏ°í ÁÙ ¹Ù²ÙÁö ¾ÊÀ½
-//     puts("milk");
+    puts(str);  //ë¬¸ìžì—´ ì¶œë ¥í•˜ê³  ìžë™ ì¤„ ë°”ê¿ˆ
+    fputs(ps, stdout);  //ë¬¸ìžì—´ ì¶œë ¥í•˜ê³  ì¤„ ë°”ê¾¸ì§€ ì•ŠìŒ
+    puts("milk");
 
-//     return 0;
-// }
+    return 0;
+}
 
-//strcpy ÇÔ¼öÀÇ »ç¿ë¹ý
-// int main(){
-//     char str1[80] = "strawberry";
-//     char str2[80] = "apple";
-//     char *ps1 = "banana";
-//     char *ps2 = str2;
+//strcpy í•¨ìˆ˜ì˜ ì‚¬ìš©ë²•
+int main(){
+    char str1[80] = "strawberry";
+    char str2[80] = "apple";
+    char *ps1 = "banana";
+    char *ps2 = str2;
 
-//     printf("original string: %s\n", str1);
-//     strcpy(str1, str2);
-//     printf("modified string: %s\n", str1);
+    printf("original string: %s\n", str1);
+    strcpy(str1, str2);
+    printf("modified string: %s\n", str1);
 
-//     strcpy(str1, ps1);
-//     printf("modified string: %s\n", str1);
+    strcpy(str1, ps1);
+    printf("modified string: %s\n", str1);
 
-//     strcpy(str1, ps2);
-//     printf("modified string: %s\n", str1);
+    strcpy(str1, ps2);
+    printf("modified string: %s\n", str1);
 
-//     strcpy(str1, "banana");
-//     printf("modified string: %s\n", str1);
+    strcpy(str1, "banana");
+    printf("modified string: %s\n", str1);
 
-//     return 0;
-// }
+    return 0;
+}
 
-//strncpy ÇÔ¼ö¸¦ »ç¿ëÇÑ ¹®ÀÚ¿­ º¹»ç
-// int main(){
-//     char str[20] = "mango tree";
+//strncpy í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•œ ë¬¸ìžì—´ ë³µì‚¬
+int main(){
+    char str[20] = "mango tree";
 
-//     strncpy(str, "apple-pie", 5);
+    strncpy(str, "apple-pie", 5);
 
-//     printf("%s", str);
+    printf("%s", str);
 
-//     return 0;
-// }
+    return 0;
+}
 
-//strcat, strncat ÇÔ¼ö¸¦ »ç¿ëÇÑ ¹®ÀÚ¿­ ºÙÀÌ±â
-// int main(){
-//     char str[80] = "straw";
+//strcat, strncat í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•œ ë¬¸ìžì—´ ë¶™ì´ê¸°
+int main(){
+    char str[80] = "straw";
 
-//     strcat(str, "berry");
-//     printf("%s\n", str);
-//     strncat(str, "piece", 3);
-//     printf("%s\n", str);
+    strcat(str, "berry");
+    printf("%s\n", str);
+    strncat(str, "piece", 3);
+    printf("%s\n", str);
 
-//     return 0;
-// }
+    return 0;
+}
 
-//strlen ÇÔ¼ö¸¦ ÀÌ¿ëÇØ µÎ ¹®ÀÚ¿­ Áß ±æÀÌ°¡ ±ä ´Ü¾î Ãâ·Â
-// int main(){
-//     char str1[80], str2[80];
-//     char *resp;
+//strlen í•¨ìˆ˜ë¥¼ ì´ìš©í•´ ë‘ ë¬¸ìžì—´ ì¤‘ ê¸¸ì´ê°€ ê¸´ ë‹¨ì–´ ì¶œë ¥
+int main(){
+    char str1[80], str2[80];
+    char *resp;
 
-//     printf("type two fruits: ");
-//     scanf("%s%s", str1, str2);
-//     if(strlen(str1) > strlen(str2)){
-//         resp = str1;
-//     }else{
-//         resp = str2;
-//     }
+    printf("type two fruits: ");
+    scanf("%s%s", str1, str2);
+    if(strlen(str1) > strlen(str2)){
+        resp = str1;
+    }else{
+        resp = str2;
+    }
 
-//     printf("longest name of fruit: %s", resp);
-// }
+    printf("longest name of fruit: %s", resp);
+}
 
-//strcmp, strncmp ÇÔ¼ö¸¦ »ç¿ëÇÑ ¹®ÀÚ¿­ ºñ±³
-// int main(){
-//     char str1[80] = "pear";
-//     char str2[80] = "peach";
+//strcmp, strncmp í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•œ ë¬¸ìžì—´ ë¹„êµ
+int main(){
+    char str1[80] = "pear";
+    char str2[80] = "peach";
 
-//     printf("word that is alphabetically late: ");
-//     if(strcmp(str1, str2)>0)
-//         printf("%s\n", str1);
-//     else
-//         printf("%s\n", str2);
+    printf("word that is alphabetically late: ");
+    if(strcmp(str1, str2)>0)
+        printf("%s\n", str1);
+    else
+        printf("%s\n", str2);
 
-//     printf("copare only the first three letters: ");
-//     if(strncmp(str1, str2, 3) == 0)
-//         printf("same");
-//     else
-//         printf("different");
+    printf("copare only the first three letters: ");
+    if(strncmp(str1, str2, 3) == 0)
+        printf("same");
+    else
+        printf("different");
 
-//     return 0;
-// }
+    return 0;
+}
 
-//´Ü¾îÀÇ ±æÀÌ°¡ 5ÀÚ¸¦ ³Ñ¾î°¡´Â °æ¿ì 6ÀÚºÎÅÍ * Ãâ·Â
-// int main(){
-//     char ch[80];
-//     char str[80] = "";
-//     int i;
+//ë‹¨ì–´ì˜ ê¸¸ì´ê°€ 5ìžë¥¼ ë„˜ì–´ê°€ëŠ” ê²½ìš° 6ìžë¶€í„° * ì¶œë ¥
+int main(){
+    char ch[80];
+    char str[80] = "";
+    int i;
 
-//     printf("input a word: ");
-//     gets(ch);
+    printf("input a word: ");
+    gets(ch);
 
-//     if (strlen(ch) > 5){
-//         strncpy(str, ch, 5);
-//         for(i=0;i<strlen(ch) - 5;i++)
-//             strcat(str, "*");
-//         printf("%s", str);
-//     }else
-//         printf("%s", ch);
+    if (strlen(ch) > 5){
+        strncpy(str, ch, 5);
+        for(i=0;i<strlen(ch) - 5;i++)
+            strcat(str, "*");
+        printf("%s", str);
+    }else
+        printf("%s", ch);
 
-//     return 0;
-// }
+    return 0;
+}
 
-//¼¼ ´Ü¾î¸¦ ÀÔ·ÂÇÏ¸é »çÀü¼ø¼­´ë·Î Ãâ·Â
+//ì„¸ ë‹¨ì–´ë¥¼ ìž…ë ¥í•˜ë©´ ì‚¬ì „ìˆœì„œëŒ€ë¡œ ì¶œë ¥
 void swap(char *str1, char *str2);
 int main(){
     char str1[80], str2[80], str3[80];
