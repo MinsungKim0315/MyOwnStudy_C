@@ -1,80 +1,80 @@
 #include<stdio.h>
 
-//Æ÷ÀÎÅÍ¿Í ÀÌÁß Æ÷ÀÎÅÍÀÇ °ü°è
-// int main(){
-//     int a = 10;
-//     int *pi;
-//     int **ppi;
+//í¬ì¸í„°ì™€ ì´ì¤‘ í¬ì¸í„°ì˜ ê´€ê³„
+int main(){
+    int a = 10;
+    int *pi;
+    int **ppi;
 
-//     pi = &a;
-//     ppi = &pi;
+    pi = &a;
+    ppi = &pi;
 
-//     printf("-------------------------------------------------------\n");
-//     printf("º¯¼ö   º¯¼ö°ª    &¿¬»ê     *¿¬»ê      **¿¬»ê\n");
-//     printf("-------------------------------------------------------\n");
-//     printf("  a%10d%10u\n", a, &a);
-//     printf(" pi%10u%10u%10d\n", pi, &pi, *pi);
-//     printf("ppi%10u%10u%10u%10u\n", ppi, &ppi, *ppi, **ppi);
-//     printf("-------------------------------------------------------\n");
+    printf("-------------------------------------------------------\n");
+    printf("ë³€ìˆ˜   ë³€ìˆ˜ê°’    &ì—°ì‚°     *ì—°ì‚°      **ì—°ì‚°\n");
+    printf("-------------------------------------------------------\n");
+    printf("  a%10d%10u\n", a, &a);
+    printf(" pi%10u%10u%10d\n", pi, &pi, *pi);
+    printf("ppi%10u%10u%10u%10u\n", ppi, &ppi, *ppi, **ppi);
+    printf("-------------------------------------------------------\n");
 
-//     return 0;
-// }
+    return 0;
+}
 
-//ÀÌÁß Æ÷ÀÎÅÍ¸¦ »ç¿ëÇÑ Æ÷ÀÎÅÍ ±³È¯
-// void swap_ptr(char **ppa, char **ppb);
+//ì´ì¤‘ í¬ì¸í„°ë¥¼ ì‚¬ìš©í•œ í¬ì¸í„° êµí™˜
+void swap_ptr(char **ppa, char **ppb);
 
-// int main(){
-//     char *pa = "success";
-//     char *pb = "failure";
+int main(){
+    char *pa = "success";
+    char *pb = "failure";
 
-//     printf("pa -> %s, pb -> %s\n", pa, pb);
-//     swap_ptr(&pa, &pb);
-//     printf("pa -> %s, pb -> %s\n", pa, pb);
+    printf("pa -> %s, pb -> %s\n", pa, pb);
+    swap_ptr(&pa, &pb);
+    printf("pa -> %s, pb -> %s\n", pa, pb);
 
-//     return 0;
-// }
-// void swap_ptr(char **ppa, char **ppb){
-//     char *pt;
+    return 0;
+}
+void swap_ptr(char **ppa, char **ppb){
+    char *pt;
 
-//     pt = *ppa;
-//     *ppa = *ppb;
-//     *ppb = pt;
-// }
+    pt = *ppa;
+    *ppa = *ppb;
+    *ppb = pt;
+}
 
-//Æ÷ÀÎÅÍ ¹è¿­ÀÇ °ªÀ» Ãâ·ÂÇÏ´Â ÇÔ¼ö
-// void print_str(char **pps, int cnt);
-// int main(){
-//     char *ptr_ary[] = {"eagle", "tiger", "lion", "squirrel"};
-//     int count;
+//í¬ì¸í„° ë°°ì—´ì˜ ê°’ì„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
+void print_str(char **pps, int cnt);
+int main(){
+    char *ptr_ary[] = {"eagle", "tiger", "lion", "squirrel"};
+    int count;
 
-//     count = sizeof(ptr_ary) / sizeof(ptr_ary[0]);
-//     print_str(ptr_ary, count);
+    count = sizeof(ptr_ary) / sizeof(ptr_ary[0]);
+    print_str(ptr_ary, count);
 
-//     return 0;
-// }
+    return 0;
+}
 
-// void print_str(char **pps, int cnt){
-//     int i;
+void print_str(char **pps, int cnt){
+    int i;
 
-//     for(i=0;i<cnt;i++){
-//         printf("%s\n", pps[i]);
-//     }
-// }
+    for(i=0;i<cnt;i++){
+        printf("%s\n", pps[i]);
+    }
+}
 
-//¹è¿­ Æ÷ÀÎÅÍ·Î 2Â÷¿ø ¹è¿­ÀÇ °ª Ãâ·Â
-// int main(){
-//     int ary[3][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
-//     int (*pa)[4];
-//     int i, j;
+//ë°°ì—´ í¬ì¸í„°ë¡œ 2ì°¨ì› ë°°ì—´ì˜ ê°’ ì¶œë ¥
+int main(){
+    int ary[3][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
+    int (*pa)[4];
+    int i, j;
 
-//     pa = ary;
-//     for(i=0;i<3;i++){
-//         for(j=0;j<4;j++){
-//             printf("%5d", pa[i][j]);
-//         }
-//         printf("\n");
-//     }
-// }
+    pa = ary;
+    for(i=0;i<3;i++){
+        for(j=0;j<4;j++){
+            printf("%5d", pa[i][j]);
+        }
+        printf("\n");
+    }
+}
 
 /*Pointer Array V.S. Array Pointer
 ##Pointer Array
@@ -87,45 +87,45 @@ specifically points to the first element of a particular array
 ex) int (*arrptr)[5] represents a pointer that points to an array of 5 int elements
 */
 
-//2Â÷¿ø ¹è¿­ÀÇ °ªÀ» Ãâ·ÂÇÏ´Â ÇÔ¼ö
-// void print_ary(int (*pa)[4]);
+//2ì°¨ì› ë°°ì—´ì˜ ê°’ì„ ì¶œë ¥í•˜ëŠ” í•¨ìˆ˜
+void print_ary(int (*pa)[4]);
 
-// int main(){
-//     int ary[3][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
+int main(){
+    int ary[3][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
 
-//     print_ary(ary);
+    print_ary(ary);
 
-//     return 0;
-// }
-// void print_ary(int (*pa)[4]){
-//     int i, j;
+    return 0;
+}
+void print_ary(int (*pa)[4]){
+    int i, j;
 
-//     for(i=0;i<3;i++){
-//         for(j=0;j<4;j++){
-//             printf("%5d", pa[i][j]);
-//         }
-//         printf("\n");
-//     }
-// }
+    for(i=0;i<3;i++){
+        for(j=0;j<4;j++){
+            printf("%5d", pa[i][j]);
+        }
+        printf("\n");
+    }
+}
 
-//ÇÔ¼ö Æ÷ÀÎÅÍ¸¦ »ç¿ëÇÑ ÇÔ¼ö È£Ãâ
-// int sum(int, int);
+//í•¨ìˆ˜ í¬ì¸í„°ë¥¼ ì‚¬ìš©í•œ í•¨ìˆ˜ í˜¸ì¶œ
+int sum(int, int);
 
-// int main(){
-//     int (*fp)(int, int);
-//     int res;
+int main(){
+    int (*fp)(int, int);
+    int res;
 
-//     fp = sum;
-//     res = fp(10, 20);
-//     printf("result: %d\n", res);
+    fp = sum;
+    res = fp(10, 20);
+    printf("result: %d\n", res);
     
-//     return 0;
-// }
-// int sum(int a, int b){
-//     return (a + b);
-// }
+    return 0;
+}
+int sum(int a, int b){
+    return (a + b);
+}
 
-//ÇÔ¼ö Æ÷ÀÎÅÍ·Î ¿øÇÏ´Â ÇÔ¼ö¸¦ È£ÃâÇÏ´Â ÇÁ·Î±×·¥
+//í•¨ìˆ˜ í¬ì¸í„°ë¡œ ì›í•˜ëŠ” í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ëŠ” í”„ë¡œê·¸ë¨
 void func(int (*fp)(int, int));
 int sum(int a, int b);
 int mul(int a, int b);
@@ -170,18 +170,16 @@ int max(int a, int b){
 }
 
 //void pointer
-// int main(){
-//     int a = 10;
-//     double b = 3.5;
-//     void *vp;
+int main(){
+    int a = 10;
+    double b = 3.5;
+    void *vp;
 
-//     vp = &a;
-//     printf("a: %d\n", *(int *)vp);
+    vp = &a;
+    printf("a: %d\n", *(int *)vp);
 
-//     vp = &b;
-//     printf("b: %.1lf\n", *(double *)vp);
+    vp = &b;
+    printf("b: %.1lf\n", *(double *)vp);
 
-//     return 0;
-// }
-
-//ÇÁ·ÎÇÊ ±³È¯ ÇÁ·Î±×·¥
+    return 0;
+}
