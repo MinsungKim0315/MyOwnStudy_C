@@ -92,7 +92,7 @@
 //     return 0;
 // }
 
-//ÆÄÀÏÀÇ ÇüÅÂ¿Í °³¹æ ¸ğµå°¡ ´Ù¸¥ °æ¿ì
+//íŒŒì¼ì˜ í˜•íƒœì™€ ê°œë°© ëª¨ë“œê°€ ë‹¤ë¥¸ ê²½ìš°
 // int main(){
 //     FILE *fp;
 //     int ary[10] = {13, 10, 13, 13, 10, 26, 13, 10, 13, 10}; //13 = \r, 10 = \n
@@ -115,7 +115,7 @@
 //     return 0;
 // }
 
-//a+ ¸ğµå·Î ÆÄÀÏÀÇ ³»¿ëÀ» È®ÀÎÇÏ°í Ãâ·Â
+//a+ ëª¨ë“œë¡œ íŒŒì¼ì˜ ë‚´ìš©ì„ í™•ì¸í•˜ê³  ì¶œë ¥
 // int main(){
 //     FILE *fp;
 //     char str[20];
@@ -150,7 +150,7 @@
 //     return 0;
 // }
 
-//¿©·¯ ÁÙÀÇ ¹®ÀåÀ» ÀÔ·ÂÇÏ¿© ÇÑ ÁÙ Ãâ·Â
+//ì—¬ëŸ¬ ì¤„ì˜ ë¬¸ì¥ì„ ì…ë ¥í•˜ì—¬ í•œ ì¤„ ì¶œë ¥
 // int main(){
 //     FILE *ifp, *ofp;
 //     char str[80];
@@ -183,7 +183,7 @@
 //     return 0;
 // }
 
-//´Ù¾çÇÑ ÀÚ·áÇüÀ» Çü½Ä¿¡ ¸Â°Ô ÀÔÃâ·Â
+//ë‹¤ì–‘í•œ ìë£Œí˜•ì„ í˜•ì‹ì— ë§ê²Œ ì…ì¶œë ¥
 // int main(){
 //     FILE *ifp, *ofp;
 //     char name[20];
@@ -219,7 +219,7 @@
 //     return 0;
 // }
 
-//¹öÆÛ °øÀ¯·Î ¹ß»ıÇÏ´Â ¹®Á¦
+//ë²„í¼ ê³µìœ ë¡œ ë°œìƒí•˜ëŠ” ë¬¸ì œ
 // int main(){
 //     FILE *fp;
 //     int age;
@@ -237,7 +237,7 @@
 //     return 0;
 // }
 
-//fprintf¿Í fwrite Â÷ÀÌ
+//fprintfì™€ fwrite ì°¨ì´
 // int main(){
 //     FILE *afp, *bfp;
 //     int num = 10;
@@ -261,7 +261,7 @@
 //     return 0;
 // }
 
-//´Ü¾î °ËÃâ ÇÁ·Î±×·¥(b.txt¿¡ ÀÔ·ÂÇØ¼­ a.txt¿¡ ¾ø´Â°ÍÀ» c.txt »ı¼ºÇØ¼­ Ãâ·Â)
+//ë‹¨ì–´ ê²€ì¶œ í”„ë¡œê·¸ë¨(b.txtì— ì…ë ¥í•´ì„œ a.txtì— ì—†ëŠ”ê²ƒì„ c.txt ìƒì„±í•´ì„œ ì¶œë ¥)
 /*read a.txt, write on b.txt, create c.txt and write on it*/
 #define MAX_WORDS 1000
 int main(){
@@ -288,7 +288,7 @@ int main(){
         return 1;
     }
 
-    //b.text¿¡ ´Ü¾î ÀÔ·Â
+    //b.textì— ë‹¨ì–´ ì…ë ¥
     while(count < 10){
         printf("words that are below 10 words: ");
         scanf("%s", str);
@@ -298,7 +298,7 @@ int main(){
 
     rewind(bfp);    //Reset file pointer to the beginning of b.text to read from it
 
-    //a.text¿Í b.text ºñ±³
+    //a.textì™€ b.text ë¹„êµ
     while (fgets(str, sizeof(str), afp) && totalWordsInFirstFile < MAX_WORDS) {
         str[strcspn(str, "\n")] = 0; // Remove newline character
         strcpy(wordsInFirstFile[totalWordsInFirstFile++], str);
@@ -312,7 +312,7 @@ int main(){
                 break;
             }
         }
-        //°ãÄ¡Áö ¾Ê´Â ´Ü¾î c.text¿¡ print
+        //ê²¹ì¹˜ì§€ ì•ŠëŠ” ë‹¨ì–´ c.textì— print
         if (!found) {
             fprintf(cfp, "%s\n", str);
         }
