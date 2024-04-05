@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-//´ë¹®ÀÚ¸¦ ¼Ò¹®ÀÚ·Î º¯°æ
+//ëŒ€ë¬¸ìë¥¼ ì†Œë¬¸ìë¡œ ë³€ê²½
 // int main(){
 //     char small, cap = 'G';
 
@@ -43,14 +43,14 @@
 //     }
 // }
 
-//scanf ÇÔ¼ö ¹İÈ¯°ª È°¿ë
+//scanf í•¨ìˆ˜ ë°˜í™˜ê°’ í™œìš©
 // int main(){
 //     int res;
 //     char ch;
 
 //     while(1){
 //         res = scanf("%c", &ch);
-//         if (res == EOF) break;  //<ctrl> + <z>´©¸£¸é EOF´Â -1·Î º¯È¯ --> ÀÔ·Â ³¡
+//         if (res == EOF) break;  //<ctrl> + <z>ëˆ„ë¥´ë©´ EOFëŠ” -1ë¡œ ë³€í™˜ --> ì…ë ¥ ë
 //         printf("%d ", ch);
 //     }
 //     return 0;
